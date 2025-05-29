@@ -1,0 +1,1 @@
+select manager_id, count(*) from employees group by manager_id having count(*)>2;
