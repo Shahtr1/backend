@@ -2040,3 +2040,425 @@ Client ----------------> Server SYN
 Client <---------------- Server SYN-ACK
 Client ----------------> Server ACK
 Connection Established
+
+Keycloak Basics
+What is Keycloak and what are its primary use cases?
+
+What authentication protocols does Keycloak support?
+
+How does Keycloak differ from other identity providers like Okta or Auth0?
+
+What is a Realm in Keycloak?
+
+Can you explain the concept of a Client in Keycloak?
+
+What are Roles in Keycloak and how are they used?
+
+What is a Keycloak User Federation?
+
+What is the difference between a Realm role and a Client role?
+
+How does Keycloak store user data?
+
+What are groups in Keycloak?
+
+🔐 Authentication & Authorization
+How does Keycloak handle user authentication?
+
+What is the flow of OAuth2 Authorization Code Grant in Keycloak?
+
+How does OpenID Connect work in Keycloak?
+
+What is a login flow in Keycloak?
+
+How do you customize authentication flows?
+
+What is a Required Action in Keycloak?
+
+What is an execution in Keycloak authentication flow?
+
+How does Keycloak support MFA (Multi-Factor Authentication)?
+
+How are tokens managed in Keycloak?
+
+What is the default token expiration in Keycloak?
+
+🌐 Realms, Clients, and Roles
+How do you create a new Realm in Keycloak?
+
+What types of clients does Keycloak support?
+
+What is the difference between Confidential and Public clients?
+
+What is Direct Access Grant?
+
+How do you assign roles to users in Keycloak?
+
+How can you map external groups or roles to Keycloak roles?
+
+How can you use client scopes in Keycloak?
+
+What is role-based access control (RBAC) in Keycloak?
+
+How do you use Protocol Mappers in Keycloak?
+
+What is the purpose of client templates?
+
+🔄 User Federation
+What is User Federation in Keycloak?
+
+Which providers does Keycloak support for User Federation?
+
+How do you configure LDAP with Keycloak?
+
+What is the difference between LDAP import and sync?
+
+What is Kerberos authentication in Keycloak?
+
+How does syncing work for federated users?
+
+Can you override federated user attributes in Keycloak?
+
+What is the impact of deleting a federated provider?
+
+How does Keycloak handle password policies with LDAP?
+
+How do you troubleshoot LDAP integration issues?
+
+🔗 Identity Brokering & SSO
+What is Identity Brokering in Keycloak?
+
+How does Keycloak handle social logins?
+
+How do you configure a SAML identity provider?
+
+How do you configure an OpenID Connect identity provider?
+
+What is the difference between Brokering and Federation?
+
+How do you map claims from an external IDP?
+
+What is the First Broker Login flow?
+
+How does linking existing accounts with external IDPs work?
+
+How do you enable Single Sign-On (SSO) across realms?
+
+How does logout work in a federated SSO setup?
+
+⚙️ Admin APIs & CLI
+What is the Keycloak Admin REST API?
+
+How do you authenticate with the Keycloak Admin API?
+
+What operations can you perform via the Admin API?
+
+How do you manage users using the Keycloak Admin CLI (kcadm.sh)?
+
+How do you use Keycloak's kcreg CLI?
+
+How do you export and import realms?
+
+How can you reset a user's password via the API?
+
+How do you automate realm creation using CLI?
+
+How do you assign roles using the Admin API?
+
+How do you retrieve token introspection information?
+
+🛡️ Deployment & Security
+How do you secure a Spring Boot application with Keycloak?
+
+How do you deploy Keycloak using Docker?
+
+What are best practices for securing Keycloak?
+
+How do you configure HTTPS in Keycloak?
+
+How can you rotate the realm's key?
+
+What are recommended settings for production deployments?
+
+How do you configure Cross-Origin Resource Sharing (CORS)?
+
+What is Trusted Host and how do you configure it?
+
+How do you enable audit logging in Keycloak?
+
+How do you integrate Keycloak with a reverse proxy (e.g., NGINX)?
+
+🧩 Integration & Customization
+How do you write a custom login page in Keycloak?
+
+How do you create a custom SPI (Service Provider Interface)?
+
+What is the Theme system in Keycloak?
+
+How do you add a custom authentication flow?
+
+How do you write a custom event listener?
+
+How do you implement a custom user federation provider?
+
+What is the difference between a theme and a custom SPI?
+
+How do you override the default Keycloak theme?
+
+Can you use external identity providers (e.g., Azure AD, Google)?
+
+How do you set up email configuration for verification?
+
+🧠 Advanced Concepts
+How does Keycloak handle token revocation?
+
+What is offline token and how is it used?
+
+What are the different types of Keycloak events?
+
+What is fine-grained authorization in Keycloak?
+
+How do you use Keycloak Authorization Services?
+
+What is a Resource Server in Keycloak?
+
+How does Keycloak handle scope-based permissions?
+
+What is policy enforcement mode?
+
+How do you use Entitlement API?
+
+What is UMA (User Managed Access) in Keycloak?
+
+🧪 Troubleshooting & Performance
+How do you debug login issues in Keycloak?
+
+Where are Keycloak logs stored?
+
+How do you monitor Keycloak metrics?
+
+What is the default logging framework?
+
+How do you increase log verbosity?
+
+How do you track token usage and expiration?
+
+How do you analyze failed login attempts?
+
+What are the most common misconfigurations in Keycloak?
+
+How can you backup and restore a Keycloak instance?
+
+How do you upgrade Keycloak to a newer version?
+
+Let me know if you want this in a downloadable format or quiz form for self-assessment.
+
+You said:
+100 questions on keycloak and oauth saml and other idps
+
+ChatGPT said:
+Here are 100 interview/practice questions covering Keycloak, OAuth2, SAML, and other Identity Providers (IdPs) — grouped by topic for clarity.
+
+🟢 Keycloak Core Concepts (1–30)
+What is Keycloak?
+
+What is a Realm in Keycloak?
+
+What is a Client in Keycloak?
+
+What is the difference between public and confidential clients?
+
+What are Realm Roles vs Client Roles?
+
+What is a user federation?
+
+How does Keycloak support LDAP?
+
+What is the default authentication flow in Keycloak?
+
+What is the Keycloak Admin Console?
+
+How do you export/import realms?
+
+What is a protocol mapper in Keycloak?
+
+How does Keycloak implement OAuth2?
+
+What is a client scope?
+
+How do you configure CORS in Keycloak?
+
+What is the difference between Direct Access Grant and Authorization Code flow?
+
+How does Keycloak handle refresh tokens?
+
+How do you implement Single Sign-On with Keycloak?
+
+What are offline tokens?
+
+How do you enable multi-factor authentication (MFA)?
+
+What is the Keycloak theme system?
+
+How do you customize login pages in Keycloak?
+
+How can you write a custom authenticator SPI?
+
+What are Keycloak's supported identity protocols?
+
+What is the difference between identity brokering and user federation?
+
+How can you configure social login in Keycloak?
+
+How does the "First Broker Login" flow work?
+
+How does logout work in a federated IdP setup?
+
+How does Keycloak handle session expiration?
+
+How do you secure a Spring Boot app with Keycloak?
+
+What is a trusted host in Keycloak?
+
+🔐 OAuth 2.0 & OpenID Connect (31–60)
+What is OAuth 2.0?
+
+What are the main roles in OAuth 2.0?
+
+What is the Authorization Code Flow?
+
+What is the Implicit Flow and why is it discouraged?
+
+What is a refresh token?
+
+What is a resource owner in OAuth?
+
+What is the role of the resource server?
+
+What is the client credentials flow used for?
+
+What are the major security concerns in OAuth 2.0?
+
+What is token introspection?
+
+How does PKCE enhance OAuth security?
+
+What is the purpose of scopes in OAuth?
+
+What is an access token vs an ID token?
+
+How do you revoke an access token?
+
+What is OpenID Connect (OIDC)?
+
+How does OIDC extend OAuth 2.0?
+
+What is a nonce in OIDC?
+
+What claims are included in an ID token?
+
+What is the userinfo endpoint?
+
+How do you implement login with Google using OAuth?
+
+What is the state parameter used for in OAuth?
+
+What are best practices for storing OAuth tokens?
+
+How do you secure a native app with OAuth?
+
+What are the differences between OAuth 1.0 and 2.0?
+
+What is token chaining?
+
+How do you validate JWT access tokens?
+
+What is an authorization server?
+
+What are dynamically registered clients?
+
+How does OAuth work in mobile apps?
+
+What are JWTs and how do they fit in OAuth/OIDC?
+
+🧩 SAML & Identity Federation (61–80)
+What is SAML?
+
+What are the core components of SAML?
+
+How does SAML differ from OAuth2?
+
+What is a SAML Assertion?
+
+What are the major use cases for SAML?
+
+What is an Identity Provider (IdP) in SAML?
+
+What is a Service Provider (SP) in SAML?
+
+How is a SAML request initiated?
+
+What is Single Logout (SLO) in SAML?
+
+How is encryption handled in SAML?
+
+What is metadata exchange in SAML?
+
+What are attributes in SAML assertions?
+
+How do you set up SAML IdP with Keycloak?
+
+How can you troubleshoot SAML issues in Keycloak?
+
+What is artifact binding in SAML?
+
+What is the difference between POST and Redirect bindings?
+
+How does Just-In-Time (JIT) user provisioning work in SAML?
+
+How does SAML handle session expiration?
+
+What tools can you use to debug SAML assertions?
+
+What is RelayState in SAML?
+
+🌐 Other Identity Providers (IdPs) (81–100)
+What is an Identity Provider (IdP)?
+
+What are some examples of popular IdPs?
+
+How do you integrate Azure AD with Keycloak?
+
+How do you configure Okta as an OIDC IdP in Keycloak?
+
+What is the difference between OIDC and SAML IdPs?
+
+What is SCIM and how is it used with IdPs?
+
+How do you configure Active Directory as a user federation source?
+
+How do you manage trust between IdPs and SPs?
+
+What is WS-Federation?
+
+How do you support passwordless login with an IdP?
+
+How can you achieve centralized authentication with multiple apps?
+
+How does account linking work in federated login?
+
+What is step-up authentication?
+
+How do you use Google Workspace as an IdP?
+
+What are identity pools and how are they used?
+
+How do you sync users across multiple IdPs?
+
+What are IdP-initiated vs SP-initiated login flows?
+
+How do you configure identity brokering in Keycloak?
+
+What’s the role of federation metadata in enterprise IdP integrations?
+
+How do you test IdP integrations locally?
