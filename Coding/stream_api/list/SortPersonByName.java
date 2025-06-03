@@ -1,9 +1,9 @@
-package test;
+package stream_api.list;
 
-import java.util.*;
+import java.util.Comparator;
+import java.util.List;
 
-public class Solution {
-
+public class SortPersonByName {
     static class Person {
         private String name;
 
