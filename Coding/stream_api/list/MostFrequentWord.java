@@ -1,11 +1,12 @@
-package test;
+package stream_api.list;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class Solution {
-
+public class MostFrequentWord {
     public static void main(String[] args) {
         String str = "the cat and the dog";
 
