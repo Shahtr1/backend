@@ -1,65 +1,79 @@
 package threads.execution_models.readers_writers_problem;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReadWriteLock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
+import java.util.concurrent.locks.*;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Main {
 
-    // Shared resource
-    private static String sharedResource = "Initial Value";
+    private static final StringBuilder document = new StringBuilder("Document Start\n");
 
-    // Create a ReadWriteLock
-    private static ReadWriteLock lock = new ReentrantReadWriteLock();
-    private static Lock readLock = lock.readLock();
-    private static Lock writeLock = lock.writeLock();
+    private static final ReadWriteLock rwLock = new ReentrantReadWriteLock();
+    /*
+     * ReadWriteLock: A special lock that allows:
+     * 
+     * - Multiple readers at once if no writer is active.
+     * - Only one writer, and it blocks all readers during writing.
+     */
+    private static final Lock readLock = rwLock.readLock();
+    private static final Lock writeLock = rwLock.writeLock();
 
     public static void main(String[] args) {
-        // Create and start reader threads
-        for (int i = 0; i < 3; i++) {
-            new Thread(new Reader(), "Reader-" + i).start();
+        // Start writer threads
+        for (int i = 1; i <= 3; i++) {
+            new Thread(new Writer(), "Writer-" + i).start();
         }
 
-        // Create and start writer threads
-        for (int i = 0; i < 2; i++) {
-            new Thread(new Writer(), "Writer-" + i).start();
+        // Start reader threads
+        for (int i = 1; i <= 5; i++) {
+            new Thread(new Reader(), "Reader-" + i).start();
         }
     }
 
-    // Reader class
     static class Reader implements Runnable {
         @Override
         public void run() {
-            try {
-                // Acquire the read lock
+            while (true) {
                 readLock.lock();
-                System.out.println(Thread.currentThread().getName() + " is reading: " + sharedResource);
-                Thread.sleep(1000); // Simulate some reading time
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } finally {
-                // Release the read lock
-                readLock.unlock();
+                try {
+                    System.out.println(Thread.currentThread().getName() + " is reading document:\n" +
+                            "--------------------------\n" +
+                            document +
+                            "--------------------------\n");
+                } finally {
+                    readLock.unlock();
+                }
+
+                sleepRandom(2000, 4000);
             }
         }
     }
 
-    // Writer class
     static class Writer implements Runnable {
+        private int lineNumber = 1;
+
         @Override
         public void run() {
-            try {
-                // Acquire the write lock
+            while (true) {
                 writeLock.lock();
-                System.out.println(Thread.currentThread().getName() + " is writing to the shared resource.");
-                sharedResource = "Updated by " + Thread.currentThread().getName();
-                Thread.sleep(1000); // Simulate some writing time
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } finally {
-                // Release the write lock
-                writeLock.unlock();
+                try {
+                    String newLine = "Line " + lineNumber + " written by " + Thread.currentThread().getName() + "\n";
+                    document.append(newLine);
+                    System.out.println(Thread.currentThread().getName() + " wrote: " + newLine.trim());
+                    lineNumber++;
+                } finally {
+                    writeLock.unlock();
+                }
+
+                sleepRandom(3000, 5000);
             }
+        }
+    }
+
+    static void sleepRandom(int minMillis, int maxMillis) {
+        try {
+            Thread.sleep(ThreadLocalRandom.current().nextInt(minMillis, maxMillis));
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
         }
     }
 }
