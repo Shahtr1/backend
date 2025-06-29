@@ -1,4 +1,4 @@
-package data_structures.arrays_strings.palindrome;
+package palindrome;
 
 public class Palindrome {
     public static void main(String[] args) {

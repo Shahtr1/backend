@@ -1,4 +1,4 @@
-package data_structures.arrays_strings.longest_palindromic_substring;
+package longest_palindromic_substring;
 
 public class LongestPalindromeSubstr {
     public static void main(String[] args) {

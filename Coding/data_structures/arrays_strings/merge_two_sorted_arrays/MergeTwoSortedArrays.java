@@ -1,4 +1,4 @@
-package data_structures.arrays_strings.merge_two_sorted_arrays;
+package merge_two_sorted_arrays;
 
 public class MergeTwoSortedArrays {
     static int[] nums1 = { 1, 2, 3, 0, 0, 0 };

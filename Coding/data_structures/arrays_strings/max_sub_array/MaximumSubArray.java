@@ -1,4 +1,4 @@
-package data_structures.arrays_strings.max_sub_array;
+package max_sub_array;
 
 public class MaximumSubArray {
     public static void main(String[] args) {

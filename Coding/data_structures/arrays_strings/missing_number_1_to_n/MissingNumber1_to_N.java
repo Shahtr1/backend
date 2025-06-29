@@ -1,4 +1,4 @@
-package data_structures.arrays_strings.missing_number_1_to_n;
+package missing_number_1_to_n;
 
 public class MissingNumber1_to_N {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package data_structures.arrays_strings.search_rotated_sorted_array;
+package search_rotated_sorted_array;
 
 public class SearchRotatedArray {
 

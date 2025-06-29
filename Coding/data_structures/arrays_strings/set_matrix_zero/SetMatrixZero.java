@@ -1,4 +1,4 @@
-package data_structures.arrays_strings.set_matrix_zero;
+package set_matrix_zero;
 
 public class SetMatrixZero {
     public static void main(String[] args) {

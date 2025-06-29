@@ -1,4 +1,4 @@
-package data_structures.arrays_strings.product_except_self;
+package product_except_self;
 
 public class ProductExceptSelf {
     public static void main(String[] args) {

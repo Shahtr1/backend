@@ -1,4 +1,4 @@
-package data_structures.arrays_strings.long_substr_no_repeat_char;
+package long_substr_no_repeat_char;
 
 import java.util.HashMap;
 import java.util.Map;

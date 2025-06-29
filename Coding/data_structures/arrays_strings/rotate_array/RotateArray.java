@@ -1,4 +1,4 @@
-package data_structures.arrays_strings.rotate_array;
+package rotate_array;
 
 public class RotateArray {
     static int[] nums = { 1, 2, 3, 4, 5, 6 };

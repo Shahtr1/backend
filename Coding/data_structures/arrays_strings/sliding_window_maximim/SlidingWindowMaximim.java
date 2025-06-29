@@ -1,4 +1,4 @@
-package data_structures.arrays_strings.sliding_window_maximim;
+package sliding_window_maximim;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

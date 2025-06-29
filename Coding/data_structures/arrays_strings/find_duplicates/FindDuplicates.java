@@ -1,4 +1,4 @@
-package data_structures.arrays_strings.find_duplicates;
+package find_duplicates;
 
 public class FindDuplicates {
     static int[] nums = { 3, 1, 3, 4, 2 };
